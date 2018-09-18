@@ -1,3 +1,13 @@
 language: ruby
 rvm:
- - 2.2
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2
+deploy:
+  provider: heroku
+  api_key:
+    secure: F+g0qs4UkeaQVgCq2O/QyJQTpVSX7/61/hc0hoI1KebFZu2toJ1b5VJO7osTOOY/D0LjqORuGs7hyieSSc60skVu1uuKRJs2mtl+OeYnvgAQyAVCO6BgKIm53JLvgfzs+4cFjvL8aLPwK4rA9Ua3mKWyJhsC971K5iyr6iK7qzb3QUZkNoSGshRmRbQa3SJiq9g8TkAFbugQAG5ZOO+NYZ/W+6iynxAX5nhUJkO7e6Wb/iMxObPE203nPvz/pECygssm25dx5O4y4ZM5UfZCpGHe8tUWKt2Wx0eItbs2vzSOS2fRY8vYdRb31O22gS9DxTJ5QmkDeExJDotIPB+YEaKqzMZTFnjCrl8zJeD6RghJeYLPRpPkuKfixmZ7aIu+SYPaCGnNuqXr2sg3zVz7MgX/n/LoMHMU3ia4L6jly7J99BiZMNPtTw09AAWnYc2fz15K//0LDRW2wqUKhj0fjlgrYj8C/3HSn/0PdLmfuCxi7JaSSyRWsf1I45qPTpd+NSK8g4pVZ/pO5zeIw5Yfw3cInZcH0UP2xUPy6JIFsFTST4P82hs94lAbGWopUcaJHSxed62SSAJSk5dmGbqkAS4ohD3ap9xdsAI981ujOa+yFRd+TyQzLYlt7u5pznweWGkAIrrR5Ecp8Ov5MnO8OuJiWGEIWYQpkUhR0v21X4Q=
+  app: Pizzeria
+  on:
+    repo: JayeRemi/Pizzeria
