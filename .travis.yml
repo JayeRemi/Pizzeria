@@ -9,3 +9,14 @@ deploy:
   on:
     repo: JayeRemi/Pizzeria
 
+env:
+  global:
+    - CC_TEST_REPORTER_ID=1ead3746b2874a5728713b5cf8ba77e1ec9160dfdd891c99eecccd59fbb1d4b0
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - bundle exec rspec
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
